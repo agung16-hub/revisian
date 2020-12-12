@@ -75,8 +75,8 @@
                             <th scope="row"><?= $index + 1; ?></th>
                             <td><?= $details->nama_barang; ?></td>
                             <td><?= $details->jumlah; ?></td>
-                            <td>Rp. <?= number_format($details->harga, 0, ',', '.'); ?></td>
-                            <td>Rp. <?= number_format($details->harga * $details->jumlah, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga_jual, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga_jual * $details->jumlah, 0, ',', '.'); ?></td>
                         </tr>
                     <?php } ?>
                     <tr>
@@ -186,8 +186,8 @@
                             <th scope="row"><?= $index + 1; ?></th>
                             <td><?= $details->nama_barang; ?></td>
                             <td><?= $details->jumlah; ?></td>
-                            <td>Rp. <?= number_format($details->harga, 0, ',', '.'); ?></td>
-                            <td>Rp. <?= number_format($details->harga * $details->jumlah, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga_jual, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga_jual * $details->jumlah, 0, ',', '.'); ?></td>
                         </tr>
                     <?php } ?>
                     <tr>
