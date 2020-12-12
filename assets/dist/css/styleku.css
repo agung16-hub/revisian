@@ -1,0 +1,31 @@
+.kop, .identitas{
+    border-style: solid;
+}
+
+.identitas{
+    border-top: 0px;
+}
+
+thead{
+    border-color: black;
+}
+
+.table {
+    border:  solid #000000;
+  }
+  .table-bordered > thead > tr > th,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > thead > tr > td,
+  .table-bordered > tbody > tr > td,
+  .table-bordered > tfoot > tr > td {
+     border:  solid #000000;
+  }
+img{
+    max-width: 3.81cm;
+    max-height: 5.59cm;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-style:'Roboto', sans-serif;
+}
