@@ -19,7 +19,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-2 col-lg-2">
-                        <img src="<?= base_url('assets/image/logo toko.jpg')?>" alt="">
+                        <img src="<?= base_url('assets/image/logo toko.jpg') ?>" alt="">
                     </div>
                     <div class="col-md-8 col-lg-8">
                         <h1>ENAM BELAS JAYA FURNITURE</h1>
@@ -49,9 +49,10 @@
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <h5>Situbondo, <?= date('d-m-Y', strtotime($penjualan[0]->tanggal_penjualan)); ?></h5>
-			<h5>Kepada:</h5>                      
-  			<h5><?= $penjualan[0]->nama_customer; ?></h5>
-                        <h5><?= $penjualan[0]->alamat; ?></h5>
+                        <h5>Kepada:</h5>
+                        <h5><?= $penjualan[0]->nama_customer; ?></h5>
+                        <h5>Alamat : <?= $penjualan[0]->alamat; ?></h5>
+                        <h5> No hp : <?= $penjualan[0]->nomor_telepon; ?></h5>
                     </div>
                 </div>
             </div>
@@ -74,13 +75,21 @@
                             <th scope="row"><?= $index + 1; ?></th>
                             <td><?= $details->nama_barang; ?></td>
                             <td><?= $details->jumlah; ?></td>
-                            <td><?= $details->harga; ?></td>
-                            <td><?= $details->harga * $details->jumlah; ?></td>
+                            <td>Rp. <?= number_format($details->harga, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga * $details->jumlah, 0, ',', '.'); ?></td>
                         </tr>
                     <?php } ?>
                     <tr>
                         <td colspan="4">Total Harga</td>
-                        <td><?= $penjualan[0]->total; ?></td>
+                        <td>Rp. <?= number_format($penjualan[0]->total, 0, ',', '.'); ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">DP</td>
+                        <td>Rp. <?= number_format($penjualan[0]->bayar, 0, ',', '.'); ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Sisa Pelunasan</td>
+                        <td>Rp. <?= number_format($penjualan[0]->kembali, 0, ',', '.'); ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -121,7 +130,7 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-2 col-lg-2">
-                        <img src="<?= base_url('assets/image/logo toko.jpg')?>" alt="">
+                        <img src="<?= base_url('assets/image/logo toko.jpg') ?>" alt="">
                     </div>
                     <div class="col-md-8 col-lg-8">
                         <h1>ENAM BELAS JAYA FURNITURE</h1>
@@ -151,9 +160,10 @@
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <h5>Situbondo, <?= date('d-m-Y', strtotime($penjualan[0]->tanggal_penjualan)); ?></h5>
-			<h5>Kepada:</h5>                      
-  			<h5><?= $penjualan[0]->nama_customer; ?></h5>
-                        <h5><?= $penjualan[0]->alamat; ?></h5>
+                        <h5>Kepada:</h5>
+                        <h5><?= $penjualan[0]->nama_customer; ?></h5>
+                        <h5>Alamat : <?= $penjualan[0]->alamat; ?></h5>
+                        <h5> No hp : <?= $penjualan[0]->nomor_telepon; ?></h5>
                     </div>
                 </div>
             </div>
@@ -176,13 +186,21 @@
                             <th scope="row"><?= $index + 1; ?></th>
                             <td><?= $details->nama_barang; ?></td>
                             <td><?= $details->jumlah; ?></td>
-                            <td><?= $details->harga; ?></td>
-                            <td><?= $details->harga * $details->jumlah; ?></td>
+                            <td>Rp. <?= number_format($details->harga, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($details->harga * $details->jumlah, 0, ',', '.'); ?></td>
                         </tr>
                     <?php } ?>
                     <tr>
                         <td colspan="4">Total Harga</td>
-                        <td><?= $penjualan[0]->total; ?></td>
+                        <td>Rp. <?= number_format($penjualan[0]->total, 0, ',', '.'); ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">DP</td>
+                        <td>Rp. <?= number_format($penjualan[0]->bayar, 0, ',', '.'); ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Sisa Pelunasan</td>
+                        <td>Rp. <?= number_format($penjualan[0]->kembali, 0, ',', '.'); ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -216,4 +234,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     -->
 </body>
+
 </html>

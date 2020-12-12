@@ -24,7 +24,8 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-3">
-                                <input class="form-control" readonly name="kode_barang" id="kode_barang" type="text" placeholder="kode barang" aria-describedby="basic-addon2" />
+                                <input class="form-control" name="nomor_telepon" id="nomor_telepon" type="text" required placeholder="Nomor Telepon" aria-describedby="basic-addon2" />
+                                <input class="form-control" readonly name="kode_barang" id="kode_barang" type="hidden" placeholder="kode barang" aria-describedby="basic-addon2" />
                             </div>
                             <div class="col-md-3">
                                 <!-- <input class="form-control" name="nama_barang" type="select" placeholder="nama barang"  aria-describedby="basic-addon2" /> -->
@@ -40,7 +41,7 @@
                                 </select> -->
                             </div>
                             <div class="col-md-3">
-                                <input class="form-control"  name="harga" id="harga" type="text"  placeholder="harga barang satuan" aria-describedby="basic-addon2" />
+                                <input class="form-control" name="harga" id="harga" type="text" placeholder="harga barang satuan" aria-describedby="basic-addon2" />
                             </div>
                             <div class="col-md-2">
                                 <input class="form-control" name="jumlah" type="text" onkeypress="return hanyaAngka(event)" placeholder="Qty" id="qty" aria-describedby="basic-addon2" />
@@ -69,7 +70,7 @@
                         </div>
                         <div class="float-right">
                             <div class="col-12 pt-2 pr-2">
-                                <input type="text" class="form-control" required name="total" id="total"  readonly placeholder="Total">
+                                <input type="text" class="form-control" required name="total" id="total" readonly placeholder="Total">
                             </div>
                             <div class="col-12 pt-2 pr-2">
                                 <input type="text" class="form-control" required onkeypress="return hanyaAngka(event)" name="bayar" id="bayar" placeholder="Bayar">
@@ -78,7 +79,7 @@
                                 <input type="text" class="form-control" required name="kembali" id="kembali" readonly placeholder="Kembali">
                             </div>
                             <div class="col-12 pt-2 pr-2">
-                                <button type="submit" disabled id="cetak" class="form-control btn btn-primary">Cetak</button>
+                                <button type="submit" id="cetak" class="form-control btn btn-primary">Cetak</button>
                             </div>
                         </div>
 
@@ -171,8 +172,7 @@
             $("#bayar").keyup(function() {
                 var total = $('#total').val();
                 var bayar = $(this).val();
-                var kembali = parseInt(bayar) - parseInt(total);
-                cek(kembali);
+                var kembali = parseInt(total) - parseInt(bayar);
                 $("#kembali").val(kembali);
             });
 
