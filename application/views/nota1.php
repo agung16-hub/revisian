@@ -206,7 +206,7 @@
 
             </section>
         </div>
-        <hr>
+        <div class="pagebreak" style="page-break-before: always;"> </div>
         <hr>
     <?php } ?>
     <!-- Optional JavaScript; choose one of the two! -->
