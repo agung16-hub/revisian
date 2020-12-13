@@ -41,4 +41,26 @@ class M_user extends CI_Model
     {
         return $this->db->like($column, $keyword)->get($tabel)->result();
     }
+    function total_record($tabel)
+    {
+        $this->db->from($tabel);
+        return $this->db->count_all_results();
+    }
+    function total_row($tabel, $where)
+    {
+        $this->db->from($tabel)->where($where);
+        return $this->db->count_all_results();
+    }
+    //    tampilkan dengan limit
+    function user_limit($limit, $start = 0)
+    {
+        $this->db->order_by('nama', 'ASC');
+        $this->db->limit($limit, $start);
+        return $this->db->get('dummy')->result_array();
+    }
+    function bagi($limit, $start = 0, $where)
+    {
+        $this->db->limit($limit, $start);
+        return $this->db->from('detail_penjualan')->join('barang', 'detail_penjualan.kode_barang=barang.kode_barang')->where($where)->get()->result_array();
+    }
 }

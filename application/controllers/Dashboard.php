@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller
         if ($this->session->userdata('logged_in') != true) {
             redirect(base_url('Login'));
         }
+        $this->load->model('M_user');
     }
 
 

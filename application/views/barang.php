@@ -44,7 +44,6 @@
                 <div class="modal-body">
                     <form action="" method="post" id="formtambah">
                         <div class="form-group">
-                            <input type="hidden" name="kode" id="kode">
                             <label for="nama">Nama Barang</label>
                             <input type="text" name="nama" id="namat" class="form-control" required placeholder="Masukkan Nama Barang">
                             <small class="text-danger" id="duplikasi"><strong></strong></small>
