@@ -51,48 +51,13 @@ class Kasir extends CI_Controller
             $this->M_user->insertdata('detail_penjualan', $detail_penjualan);
         }
         $this->cart->destroy();
-        redirect(base_url('Nota/cetak/' . $kode));
+        redirect(base_url('Nota/print/' . $kode));
     }
     function getbarang()
     {
         $id = $this->input->get('id');
         $data = $this->M_user->getwhere('barang', ['nama_barang' => $id]);
         echo json_encode($data);
-    }
-    function add()
-    {
-        $nama = $this->input->post('nama');
-        $stok = $this->input->post('stok');
-        $harga = $this->input->post('harga');
-        $data = [
-            'kode_produk' => uniqid(),
-            'nama' => $nama,
-            'stok' => $stok,
-            'harga' => $harga
-        ];
-        $proses = $this->M_user->insertdata('produk', $data);
-        redirect(base_url('Produk'));
-    }
-    function update()
-    {
-        $kode = $this->input->post('kode');
-        $nama = $this->input->post('nama');
-        $stok = $this->input->post('stok');
-        $harga = $this->input->post('harga');
-        $data = [
-            'nama' => $nama,
-            'stok' => $stok,
-            'harga' => $harga
-        ];
-        $update = $this->M_user->updatedata('produk', ['kode_produk' => $kode], $data);
-
-        redirect(base_url('Produk'));
-    }
-    function delete()
-    {
-        $kode = $this->input->post('kode');
-        $this->M_user->delete('produk', ['kode_produk' => $kode]);
-        redirect(base_url('Produk'));
     }
     function addcart()
     {

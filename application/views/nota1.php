@@ -154,7 +154,7 @@
                 </section>
 
                 <section class="barang">
-                    <table class="table table-bordered">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
